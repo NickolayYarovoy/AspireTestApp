@@ -16,7 +16,7 @@ namespace AspireDiscordApp
         {
             ServiceCollection services = new ServiceCollection();
 
-            services.AddHttpClient("WebAPI", x=> x.BaseAddress = new Uri(Environment.GetEnvironmentVariable("services__api__https__0")));
+            services.AddHttpClient("WebAPI", x=> x.BaseAddress = new Uri(Environment.GetEnvironmentVariable("services__api__http__0")));
             services.AddScoped(x => x.GetService<IHttpClientFactory>().CreateClient("WebAPI"));
 
             ServiceProvider prov = services.BuildServiceProvider();
